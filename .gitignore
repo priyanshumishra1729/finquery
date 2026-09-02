@@ -1,0 +1,25 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local ChromaDB vector store
+vector_store/

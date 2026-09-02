@@ -1,0 +1,110 @@
+Financial Ratios
+
+Overview
+
+Financial ratios are calculations that compare amounts from financial statements. They help users interpret liquidity, profitability, efficiency, and leverage. Ratios are most useful when compared across time, against industry benchmarks, or alongside other financial information.
+
+These educational reference notes were created for FinQuery. They do not represent the ratios of any real company and should not be treated as personalized financial advice.
+
+Current Ratio
+
+The current ratio measures whether current assets are sufficient to cover current liabilities.
+
+Formula:
+
+Current Ratio = Current Assets / Current Liabilities
+
+A current ratio above 1.0 generally indicates that current assets exceed current liabilities. A very high current ratio may suggest strong liquidity, but it could also indicate inefficient use of assets.
+
+Quick Ratio
+
+The quick ratio is a stricter liquidity measure. It excludes inventory and some other less liquid current assets.
+
+Common formula:
+
+Quick Ratio = (Cash + Short-Term Investments + Accounts Receivable) / Current Liabilities
+
+The quick ratio helps evaluate whether an organization can meet short-term obligations using assets that can usually become cash quickly.
+
+Debt-to-Equity Ratio
+
+The debt-to-equity ratio compares debt financing with owner equity.
+
+Formula:
+
+Debt-to-Equity Ratio = Total Liabilities / Total Equity
+
+A higher debt-to-equity ratio generally indicates greater financial leverage and potentially higher financial risk. However, acceptable levels vary by industry and business model.
+
+Return on Assets
+
+Return on assets, or ROA, measures how efficiently an organization uses assets to generate profit.
+
+Formula:
+
+Return on Assets = Net Income / Average Total Assets
+
+A higher ROA generally indicates that assets are being used more effectively to produce profit. ROA should be interpreted with industry context because asset-heavy industries often have different ROA levels from service-based businesses.
+
+Return on Equity
+
+Return on equity, or ROE, measures profit relative to owner equity.
+
+Formula:
+
+Return on Equity = Net Income / Average Equity
+
+ROE indicates how much profit is generated for each unit of equity. A high ROE may indicate strong profitability, but it can also be influenced by high debt levels.
+
+Gross Margin
+
+Gross margin measures gross profit as a percentage of revenue.
+
+Formula:
+
+Gross Margin = Gross Profit / Revenue
+
+Gross margin generally indicates how much revenue remains after direct production or purchase costs. A higher gross margin may indicate pricing power, efficient production, or a favorable product mix.
+
+Operating Margin
+
+Operating margin measures operating income as a percentage of revenue.
+
+Formula:
+
+Operating Margin = Operating Income / Revenue
+
+Operating margin generally indicates how efficiently an organization turns revenue into operating profit after operating expenses.
+
+Net Profit Margin
+
+Net profit margin measures net income as a percentage of revenue.
+
+Formula:
+
+Net Profit Margin = Net Income / Revenue
+
+Net profit margin generally indicates how much final profit remains from each unit of revenue after all expenses, interest, taxes, and other items.
+
+Simple Margin Example
+
+Assume an educational example with:
+
+Revenue: 100,000
+Gross Profit: 40,000
+Operating Income: 20,000
+Net Income: 12,000
+
+Gross Margin = 40,000 / 100,000 = 40%
+Operating Margin = 20,000 / 100,000 = 20%
+Net Profit Margin = 12,000 / 100,000 = 12%
+
+What Ratios Generally Indicate
+
+Liquidity ratios, such as the current ratio and quick ratio, generally indicate short-term financial flexibility.
+
+Leverage ratios, such as the debt-to-equity ratio, generally indicate how much an organization relies on debt compared with equity.
+
+Profitability ratios, such as ROA, ROE, gross margin, operating margin, and net profit margin, generally indicate how effectively the organization produces profit.
+
+No single ratio provides a complete financial assessment. Ratios should be interpreted together with the financial statements, business context, accounting policies, and trends over time.

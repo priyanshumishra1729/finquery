@@ -1,0 +1,75 @@
+Cash Flow
+
+Overview
+
+Cash flow describes the movement of cash into and out of an organization during a period. It is important because an organization needs cash to pay suppliers, employees, lenders, taxes, and other obligations.
+
+These educational reference notes were created for FinQuery. They do not represent the cash flows of any real company and should not be treated as personalized financial advice.
+
+Cash Flow Statement
+
+The cash flow statement explains how the cash balance changed during a reporting period. It usually separates cash flows into operating activities, investing activities, and financing activities.
+
+Cash flow is different from accounting profit because revenue and expenses may be recognized before or after cash is received or paid.
+
+Operating Activities
+
+Operating activities relate to the main business operations. They include cash collected from customers, cash paid to suppliers, cash paid to employees, taxes paid, and other operating cash receipts or payments.
+
+Operating cash flow is often used to evaluate whether the core business can generate enough cash to support operations.
+
+Formula:
+
+Operating Cash Flow = Cash Inflows from Operations - Cash Outflows from Operations
+
+Investing Activities
+
+Investing activities relate to the purchase and sale of long-term assets and investments. Examples include buying equipment, selling property, purchasing long-term investments, or receiving proceeds from selling investments.
+
+Cash paid to buy long-term assets is usually an investing cash outflow.
+
+Financing Activities
+
+Financing activities relate to transactions with lenders and owners. Examples include borrowing money, repaying debt, issuing shares, repurchasing shares, and paying dividends.
+
+Financing cash flows help users understand how the organization funds itself.
+
+Operating Cash Flow
+
+Operating cash flow focuses on cash generated or used by normal business activities. Positive operating cash flow generally indicates that the business is collecting enough cash from its operations to cover operating payments.
+
+However, operating cash flow should be analyzed with context. A single period may be affected by timing differences, seasonal patterns, or unusual collections and payments.
+
+Capital Expenditures
+
+Capital expenditures, often abbreviated as CapEx, are cash payments for long-term assets such as equipment, property, technology infrastructure, or major improvements. CapEx usually appears in investing activities on the cash flow statement.
+
+Capital expenditures may support future growth, but they reduce cash in the current period.
+
+Free Cash Flow
+
+Free cash flow is a measure of cash remaining after operating cash flow is reduced by capital expenditures. It is commonly used to estimate how much cash may be available for debt repayment, dividends, reinvestment, or reserves.
+
+Common formula:
+
+Free Cash Flow = Operating Cash Flow - Capital Expenditures
+
+Example:
+
+If operating cash flow is 80,000 and capital expenditures are 25,000, free cash flow is 55,000.
+
+Difference Between Profit and Cash Flow
+
+Profit is based on accounting rules and may include non-cash items or timing differences. Cash flow is based on actual cash movement.
+
+Example:
+
+A business may record revenue when it sends an invoice, but it may not collect the cash until a later period. In that case, profit may increase before cash increases.
+
+Another example is depreciation. Depreciation reduces accounting profit, but it does not require a cash payment in the period it is recorded.
+
+Why Cash Flow Matters
+
+Cash flow helps users evaluate liquidity and financial flexibility. A profitable organization can still face problems if it cannot collect cash quickly enough to pay obligations. A growing organization may also need cash for inventory, employees, equipment, or expansion before it receives cash from customers.
+
+Cash flow should be interpreted together with the income statement and balance sheet. Profitability, financial position, and cash movement each provide a different view of financial health.

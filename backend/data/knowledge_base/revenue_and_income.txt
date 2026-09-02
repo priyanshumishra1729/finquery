@@ -1,0 +1,101 @@
+Revenue and Income
+
+Overview
+
+Revenue and income are important financial measures, but they do not mean the same thing. Revenue describes money earned from selling goods or services before many costs are deducted. Net income describes the profit remaining after expenses have been subtracted.
+
+These educational reference notes were created for FinQuery. They do not represent the financial results of any real company and should not be treated as personalized financial advice.
+
+Revenue
+
+Revenue is the total amount earned from normal business activities, usually from selling products or providing services. Revenue is often called sales or top-line income because it appears near the top of the income statement.
+
+Example:
+
+If a business sells 1,000 units for 50 each, revenue is 50,000.
+
+Formula:
+
+Revenue = Selling Price x Units Sold
+
+Cost of Goods Sold
+
+Cost of goods sold, often abbreviated as COGS, represents the direct costs of producing or purchasing the goods or services sold. For a retailer, COGS may include the cost of inventory sold. For a manufacturer, it may include raw materials, direct labor, and production costs.
+
+Formula:
+
+Gross Profit = Revenue - Cost of Goods Sold
+
+Gross Profit
+
+Gross profit is the amount left after subtracting cost of goods sold from revenue. It shows how much money remains to cover operating expenses, taxes, interest, and profit after direct production or purchase costs.
+
+Example:
+
+If revenue is 50,000 and cost of goods sold is 30,000, gross profit is 20,000.
+
+Expenses
+
+Expenses are costs incurred to operate the business. Common expenses include salaries, rent, utilities, marketing, insurance, software, interest, depreciation, and taxes. Some expenses are directly tied to production, while others support the overall organization.
+
+Operating Income
+
+Operating income is profit from core business operations after operating expenses are deducted from gross profit. It excludes some non-operating items such as interest income, interest expense, and certain one-time gains or losses.
+
+Formula:
+
+Operating Income = Gross Profit - Operating Expenses
+
+Operating income helps users evaluate whether the normal business operations are profitable.
+
+Net Income
+
+Net income is the final profit after all expenses, taxes, interest, and other gains or losses are considered. It is often called the bottom line because it appears near the bottom of the income statement.
+
+Formula:
+
+Net Income = Revenue - Total Expenses
+
+Net income can be positive or negative. A negative net income is usually called a net loss.
+
+Gross Margin
+
+Gross margin measures gross profit as a percentage of revenue. It shows how much of each unit of revenue remains after direct production or purchase costs.
+
+Formula:
+
+Gross Margin = Gross Profit / Revenue
+
+Example:
+
+If gross profit is 20,000 and revenue is 50,000, gross margin is 40%.
+
+Operating Margin
+
+Operating margin measures operating income as a percentage of revenue. It indicates how efficiently the business turns revenue into operating profit.
+
+Formula:
+
+Operating Margin = Operating Income / Revenue
+
+Net Profit Margin
+
+Net profit margin measures net income as a percentage of revenue. It shows how much final profit remains from each unit of revenue after all expenses.
+
+Formula:
+
+Net Profit Margin = Net Income / Revenue
+
+Difference Between Revenue and Net Income
+
+Revenue is the total amount earned before expenses are fully deducted. Net income is the amount left after expenses are deducted.
+
+Revenue answers: How much did the organization sell?
+
+Net income answers: How much profit remained after costs and expenses?
+
+Example:
+
+If a business has revenue of 100,000 and total expenses of 85,000, net income is 15,000.
+
+In this example, revenue is much larger than net income because the business must pay for costs such as inventory, wages, rent, interest, and taxes. A business can have high revenue but low net income if its costs are also high.

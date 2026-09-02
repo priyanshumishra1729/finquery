@@ -1,0 +1,87 @@
+Balance Sheet
+
+Overview
+
+The balance sheet is a financial statement that shows an organization's financial position at a specific point in time. It reports what the organization owns, what it owes, and the owners' residual claim.
+
+These educational reference notes were created for FinQuery. They do not represent the financial position of any real company and should not be treated as personalized financial advice.
+
+Accounting Equation
+
+The balance sheet is based on the accounting equation:
+
+Assets = Liabilities + Equity
+
+This equation must always balance. Assets are financed either by borrowing from others, which creates liabilities, or by owner investment and retained profits, which create equity.
+
+Assets
+
+Assets are economic resources controlled by an organization. They are expected to provide future benefit. Assets may include cash, accounts receivable, inventory, equipment, buildings, software, patents, and investments.
+
+Current Assets
+
+Current assets are assets expected to be converted into cash, sold, or used within one year or one operating cycle. Common current assets include cash, accounts receivable, inventory, prepaid expenses, and short-term investments.
+
+Current assets help users evaluate liquidity, which is the ability to meet short-term obligations.
+
+Non-Current Assets
+
+Non-current assets are long-term assets expected to provide benefits beyond one year. Examples include property, plant, equipment, long-term investments, intangible assets, and certain right-of-use assets.
+
+Non-current assets often support the organization's long-term operations and strategy.
+
+Liabilities
+
+Liabilities are obligations that the organization owes to outside parties. They may arise from borrowing, purchasing goods or services on credit, taxes owed, wages owed, or other contractual obligations.
+
+Current Liabilities
+
+Current liabilities are obligations expected to be settled within one year or one operating cycle. Common current liabilities include accounts payable, short-term loans, accrued expenses, taxes payable, and the current portion of long-term debt.
+
+Current liabilities are important when assessing whether the organization can pay near-term obligations.
+
+Non-Current Liabilities
+
+Non-current liabilities are obligations due beyond one year. Examples include long-term loans, bonds payable, lease liabilities, and deferred tax liabilities.
+
+Non-current liabilities help users evaluate long-term financial risk and leverage.
+
+Equity
+
+Equity represents the owners' residual interest in the organization after liabilities are subtracted from assets.
+
+Formula:
+
+Equity = Assets - Liabilities
+
+Equity may include contributed capital, retained earnings, and other accumulated comprehensive income depending on the reporting framework.
+
+How the Balance Sheet Balances
+
+If an organization buys equipment using cash, one asset increases while another asset decreases. Total assets may remain the same.
+
+If an organization borrows money, cash increases and liabilities increase. Assets and liabilities both rise, so the equation remains balanced.
+
+If an organization earns profit and retains it, equity increases through retained earnings. This connects the income statement to the balance sheet.
+
+Simple Example
+
+Assume an organization has:
+
+Cash: 20,000
+Inventory: 30,000
+Equipment: 50,000
+Total Assets: 100,000
+
+Loans Payable: 40,000
+Accounts Payable: 10,000
+Total Liabilities: 50,000
+
+Equity = Assets - Liabilities
+Equity = 100,000 - 50,000
+Equity = 50,000
+
+The balance sheet would satisfy:
+
+Assets = Liabilities + Equity
+100,000 = 50,000 + 50,000

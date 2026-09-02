@@ -1,0 +1,1 @@
+"""FinQuery backend application package."""

@@ -1,0 +1,67 @@
+Financial Statements
+
+Overview
+
+Financial statements are structured reports that summarize the financial activities and financial position of an organization. They are used by managers, investors, lenders, regulators, and other stakeholders to understand how an organization earns money, spends money, owns resources, owes obligations, and generates cash.
+
+These educational reference notes were created for FinQuery. They do not represent the financial statements of any real company and should not be treated as personalized financial advice.
+
+Purpose of Financial Statements
+
+Financial statements help users evaluate performance, liquidity, solvency, and financial stability. Performance focuses on whether the organization is generating profit. Liquidity focuses on whether the organization can meet short-term obligations. Solvency focuses on whether the organization can meet long-term obligations. Financial stability considers the overall strength and sustainability of the organization.
+
+Financial statements also provide a common reporting language. Because the statements follow accounting principles and consistent formats, users can compare financial information across time periods or across similar organizations.
+
+The Major Financial Statements
+
+The three major financial statements are the income statement, the balance sheet, and the cash flow statement. Each statement answers a different financial question.
+
+The income statement answers: Did the organization generate profit during a period?
+
+The balance sheet answers: What does the organization own and owe at a specific date?
+
+The cash flow statement answers: How did cash move into and out of the organization during a period?
+
+Income Statement
+
+The income statement reports revenue, expenses, and profit over a period of time, such as a month, quarter, or year. It begins with revenue and then subtracts costs and expenses to calculate different levels of profit.
+
+A simplified income statement may follow this pattern:
+
+Revenue - Cost of Goods Sold = Gross Profit
+Gross Profit - Operating Expenses = Operating Income
+Operating Income - Taxes and Other Expenses = Net Income
+
+The income statement is useful for understanding profitability, cost structure, and operating performance.
+
+Balance Sheet
+
+The balance sheet reports assets, liabilities, and equity at a specific point in time. Assets are resources controlled by the organization. Liabilities are obligations owed to others. Equity represents the owners' residual interest after liabilities are subtracted from assets.
+
+The balance sheet follows the accounting equation:
+
+Assets = Liabilities + Equity
+
+For example, if an organization has assets of 100,000 and liabilities of 60,000, then equity is 40,000.
+
+Cash Flow Statement
+
+The cash flow statement explains how cash changed during a period. It separates cash flows into operating activities, investing activities, and financing activities.
+
+Operating activities relate to the core business, such as cash collected from customers and cash paid to suppliers or employees.
+
+Investing activities relate to long-term assets, such as buying or selling equipment.
+
+Financing activities relate to funding, such as borrowing money, repaying loans, issuing shares, or paying dividends.
+
+Relationship Between the Statements
+
+The financial statements are connected. Net income from the income statement affects retained earnings in the equity section of the balance sheet. The cash flow statement starts with or adjusts from income statement information and explains how cash changed. The ending cash balance from the cash flow statement appears as cash on the balance sheet.
+
+A simple relationship is:
+
+Income Statement: measures profit over time.
+Cash Flow Statement: explains cash movement over time.
+Balance Sheet: shows financial position at the end of the period.
+
+Together, the statements give a more complete picture than any single statement alone. A company may report profit but have weak cash flow, or it may have strong assets but high liabilities. Users should interpret the statements together when evaluating financial performance and financial condition.
