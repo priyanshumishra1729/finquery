@@ -25,10 +25,29 @@ class VectorStoreService:
 
         try:
             self.persist_directory.mkdir(parents=True, exist_ok=True)
-            self.client = chromadb.PersistentClient(path=str(self.persist_directory))
+            self.client = self._create_client_with_recovery()
             self.collection = self.client.get_or_create_collection(name=self.collection_name)
         except Exception as exc:
             raise VectorStoreServiceError("Unable to initialize the local vector store.") from exc
+
+    def _create_client_with_recovery(self):
+        """Retry once after clearing stale ChromaDB state left by a prior panic or incompatible DB."""
+        try:
+            return chromadb.PersistentClient(path=str(self.persist_directory))
+        except Exception:
+            if self.persist_directory.exists():
+                for child in self.persist_directory.iterdir():
+                    if child.is_dir():
+                        for nested in child.rglob("*"):
+                            if nested.is_file():
+                                nested.unlink(missing_ok=True)
+                        for nested in sorted(child.rglob("*"), reverse=True):
+                            if nested.is_dir():
+                                nested.rmdir()
+                        child.rmdir()
+                    else:
+                        child.unlink(missing_ok=True)
+            return chromadb.PersistentClient(path=str(self.persist_directory))
 
     def add_chunks(self, chunks: list[dict[str, object]]) -> None:
         """Store embedded chunks in ChromaDB using deterministic chunk IDs."""

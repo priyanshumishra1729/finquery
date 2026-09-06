@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 from backend.app.services.ollama_service import OllamaService, OllamaServiceError
 from backend.app.services.rag_service import RAGService, RAGServiceError
 
@@ -19,10 +21,14 @@ class ApplicationService:
         ollama_service: OllamaService | None = None,
     ) -> None:
         self.rag_service = rag_service or RAGService()
-        self.ollama_service = ollama_service or OllamaService(timeout=300.0)
+        self.ollama_service = ollama_service or OllamaService(timeout=1800.0)
 
     def process_chat(self, message: str) -> str:
         """Build RAG context, create the FinQuery prompt, and generate a response."""
+        return self.process_chat_with_context(message)["answer"]
+
+    def process_chat_with_context(self, message: str) -> dict[str, Any]:
+        """Return the answer together with retrieved context and prompt metadata."""
         normalized_message = self._normalize_message(message)
 
         try:
@@ -33,9 +39,16 @@ class ApplicationService:
         prompt = self._build_prompt(normalized_message, context)
 
         try:
-            return self.ollama_service.generate_response(prompt)
+            metadata = self.ollama_service.generate_response_with_metadata(prompt)
         except OllamaServiceError as exc:
             raise ApplicationServiceError("Unable to generate a response from the language model.") from exc
+
+        return {
+            "answer": metadata["response"],
+            "context": context,
+            "prompt": prompt,
+            "metadata": metadata,
+        }
 
     @staticmethod
     def _normalize_message(message: str) -> str:

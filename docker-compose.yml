@@ -1,0 +1,20 @@
+services:
+  finquery-backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+
+    container_name: finquery-backend
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-codellama:latest}
+      OLLAMA_EMBED_MODEL: nomic-embed-text
+
+    volumes:
+      - ./backend/data:/app/backend/data
+
+    restart: unless-stopped

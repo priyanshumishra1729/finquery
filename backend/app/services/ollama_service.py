@@ -26,6 +26,10 @@ class OllamaService:
 
     def generate_response(self, prompt: str) -> str:
         """Generate a response from Ollama for the given prompt."""
+        return self.generate_response_with_metadata(prompt)["response"]
+
+    def generate_response_with_metadata(self, prompt: str) -> dict[str, Any]:
+        """Generate a response and return the text alongside Ollama metadata."""
         payload: dict[str, Any] = {
             "model": self.model,
             "prompt": prompt,
@@ -57,4 +61,16 @@ class OllamaService:
         if not isinstance(generated_text, str):
             raise OllamaServiceError("Ollama response did not contain generated text.")
 
-        return generated_text
+        return {
+            "response": generated_text,
+            "model": data.get("model", self.model),
+            "created_at": data.get("created_at"),
+            "done": data.get("done"),
+            "prompt_eval_count": data.get("prompt_eval_count"),
+            "eval_count": data.get("eval_count"),
+            "total_duration": data.get("total_duration"),
+            "load_duration": data.get("load_duration"),
+            "prompt_eval_duration": data.get("prompt_eval_duration"),
+            "eval_duration": data.get("eval_duration"),
+            "context": data.get("context"),
+        }

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "category": "code_explanation",
+    "question": "What is the accounting equation and why is it important in a balance sheet?",
+    "reference_answer": "The accounting equation is Assets = Liabilities + Equity. It is the foundation of the balance sheet because it shows that resources owned by the organization are financed by borrowed funds or owner contributions/retained earnings.",
+    "expected_files": ["balance_sheet.txt"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 2,
+    "category": "code_explanation",
+    "question": "What does the balance sheet tell us about an organization's financial position?",
+    "reference_answer": "The balance sheet reports assets, liabilities, and equity at a specific point in time. It helps users assess financial position, liquidity, and solvency, and it is based on the accounting equation Assets = Liabilities + Equity.",
+    "expected_files": ["balance_sheet.txt", "financial_statements.txt"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 3,
+    "category": "code_retrieval",
+    "question": "Which knowledge base document defines the current ratio and quick ratio?",
+    "reference_answer": "The financial_ratios.txt document defines the current ratio and quick ratio, including formulas and interpretation. It also covers debt-to-equity, ROA, ROE, and margin ratios.",
+    "expected_files": ["financial_ratios.txt"],
+    "evaluation_type": "retrieval"
+  },
+  {
+    "id": 4,
+    "category": "code_retrieval",
+    "question": "Where is the formula for free cash flow described?",
+    "reference_answer": "The free cash flow formula is described in cash_flow.txt. It states Free Cash Flow = Operating Cash Flow - Capital Expenditures.",
+    "expected_files": ["cash_flow.txt"],
+    "evaluation_type": "retrieval"
+  },
+  {
+    "id": 5,
+    "category": "function_understanding",
+    "question": "What does the ChunkingService.chunk_documents method do in the FinQuery codebase?",
+    "reference_answer": "ChunkingService.chunk_documents loads document content, validates filename and content, and splits each document into overlapping text chunks using chunk_size and chunk_overlap. It returns a list of dictionaries with filename, chunk_index, and content.",
+    "expected_files": ["backend/app/services/chunking_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 6,
+    "category": "function_understanding",
+    "question": "Explain the role of DocumentLoader.load_documents in the project architecture.",
+    "reference_answer": "DocumentLoader.load_documents reads all .txt files from the knowledge base directory in deterministic order, returns a list of documents with filename and content, and provides the raw source data for chunking and embedding.",
+    "expected_files": ["backend/app/services/document_loader.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 7,
+    "category": "dependency_understanding",
+    "question": "How does RAGService depend on RetrievalService and what does that dependency do?",
+    "reference_answer": "RAGService owns a RetrievalService instance. It normalizes the query, validates top_k, calls retrieval_service.retrieve, and then formats the returned chunks into a prompt-ready context string. RetrievalService handles query embedding plus vector search.",
+    "expected_files": ["backend/app/services/rag_service.py", "backend/app/services/retrieval_service.py"],
+    "evaluation_type": "dependency"
+  },
+  {
+    "id": 8,
+    "category": "dependency_understanding",
+    "question": "Which services are involved when a user query is converted into a final answer?",
+    "reference_answer": "The request flows through ApplicationService, which calls RAGService.build_context, which calls RetrievalService.retrieve, which uses EmbeddingService to embed the query and VectorStoreService to search ChromaDB. The final prompt is sent to OllamaService to generate the answer.",
+    "expected_files": ["backend/app/services/application_service.py", "backend/app/services/rag_service.py", "backend/app/services/retrieval_service.py", "backend/app/services/embedding_service.py", "backend/app/services/vector_store_service.py", "backend/app/services/ollama_service.py"],
+    "evaluation_type": "dependency"
+  },
+  {
+    "id": 9,
+    "category": "bug_analysis",
+    "question": "What error path is triggered if the user sends an empty message to the API?",
+    "reference_answer": "The API request model ChatRequest validates message with a field validator that strips whitespace and rejects empty strings with a 422 validation error. The application service also rejects empty or whitespace-only strings before building the RAG context.",
+    "expected_files": ["backend/app/models/schemas.py", "backend/app/services/application_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 10,
+    "category": "bug_analysis",
+    "question": "Why can an Ollama embedding request fail and what exception is raised?",
+    "reference_answer": "EmbeddingService.generate_embedding raises EmbeddingServiceError when Ollama is unreachable, times out, returns an invalid JSON response, or supplies no usable embedding vector. The service catches connection, timeout, HTTP, and JSON errors.",
+    "expected_files": ["backend/app/services/embedding_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 11,
+    "category": "code_generation",
+    "question": "Write a Python function that normalizes a user query, removes leading and trailing whitespace, and raises a ValueError when the string is empty after trimming.",
+    "reference_answer": "A valid function should strip whitespace and reject empty strings using Python's strip() and ValueError. This mirrors the normalization logic used in the FinQuery services.",
+    "expected_files": ["backend/app/services/application_service.py", "backend/app/services/rag_service.py", "backend/app/services/retrieval_service.py"],
+    "evaluation_type": "code_generation"
+  },
+  {
+    "id": 12,
+    "category": "code_generation",
+    "question": "Write a Python helper that turns a list of retrieved data records into a prompt-ready RAG context block with source labels.",
+    "reference_answer": "The helper should iterate through chunk dictionaries, include a source header such as [Source: filename | Chunk: index], then append the content text and close with [FINQUERY CONTEXT]. This matches the formatting in RAGService._format_context.",
+    "expected_files": ["backend/app/services/rag_service.py"],
+    "evaluation_type": "code_generation"
+  },
+  {
+    "id": 13,
+    "category": "code_generation",
+    "question": "Write a minimal Python snippet that calls the Ollama embedding API using the nomic-embed-text model and returns the first embedding vector.",
+    "reference_answer": "The snippet should POST to /api/embed with JSON payload {\"model\": \"nomic-embed-text\", \"input\": text} and extract the first element of the embeddings list or the embedding field. This matches EmbeddingService.generate_embedding.",
+    "expected_files": ["backend/app/services/embedding_service.py"],
+    "evaluation_type": "code_generation"
+  },
+  {
+    "id": 14,
+    "category": "refactoring",
+    "question": "How would you refactor the repeated validation logic used across the application services without changing the external behavior?",
+    "reference_answer": "The repeated validation logic can be centralized into shared helper functions or a common validation utility, while keeping each service responsible for its own domain errors. The current architecture already separates concerns by service, and a shared validator would reduce duplication while preserving the same checks and error types.",
+    "expected_files": ["backend/app/services/application_service.py", "backend/app/services/rag_service.py", "backend/app/services/retrieval_service.py", "backend/app/services/embedding_service.py", "backend/app/services/vector_store_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 15,
+    "category": "rag_documentation",
+    "question": "What knowledge base files are used to answer questions about financial statements and the relationship among the three major statements?",
+    "reference_answer": "The primary sources are financial_statements.txt, balance_sheet.txt, and cash_flow.txt. These documents together cover the income statement, balance sheet, cash flow statement, and the links between them.",
+    "expected_files": ["financial_statements.txt", "balance_sheet.txt", "cash_flow.txt"],
+    "evaluation_type": "retrieval"
+  },
+  {
+    "id": 16,
+    "category": "rag_documentation",
+    "question": "What is the difference between profit and cash flow in the FinQuery educational notes?",
+    "reference_answer": "The documents explain that profit is based on accounting recognition and may include non-cash items or timing differences, whereas cash flow reflects actual cash movement. The cash flow statement and the income statement are therefore complementary rather than interchangeable.",
+    "expected_files": ["cash_flow.txt", "financial_statements.txt"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 17,
+    "category": "multi_file",
+    "question": "Which files define the prompt-building flow from user question to final LLM answer?",
+    "reference_answer": "ApplicationService builds the prompt, RAGService formats context, RetrievalService provides relevant chunks, and OllamaService calls the model. The relevant files are backend/app/services/application_service.py, rag_service.py, retrieval_service.py, and ollama_service.py.",
+    "expected_files": ["backend/app/services/application_service.py", "backend/app/services/rag_service.py", "backend/app/services/retrieval_service.py", "backend/app/services/ollama_service.py"],
+    "evaluation_type": "multi_file"
+  },
+  {
+    "id": 18,
+    "category": "multi_file",
+    "question": "Explain the end-to-end RAG workflow in the FinQuery project.",
+    "reference_answer": "The system loads text documents from the knowledge base, chunks them, embeds the chunks with Ollama's nomic-embed-text model, stores them in ChromaDB, retrieves relevant chunks for a query embedding, formats the chunks as context, and passes the prompt to Ollama for answer generation. The orchestration is performed by ApplicationService and RAGService.",
+    "expected_files": ["backend/app/services/document_loader.py", "backend/app/services/chunking_service.py", "backend/app/services/embedding_service.py", "backend/app/services/vector_store_service.py", "backend/app/services/retrieval_service.py", "backend/app/services/rag_service.py", "backend/app/services/application_service.py"],
+    "evaluation_type": "multi_file"
+  },
+  {
+    "id": 19,
+    "category": "function_understanding",
+    "question": "What does VectorStoreService.search return to the retrieval layer?",
+    "reference_answer": "It returns a list of dictionaries containing filename, chunk_index, content, and distance for the top matching chunks. These results are built in _format_search_results and are consumed by RetrievalService.retrieve.",
+    "expected_files": ["backend/app/services/vector_store_service.py", "backend/app/services/retrieval_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 20,
+    "category": "code_retrieval",
+    "question": "Which document contains the definition of operating cash flow and cash flow statement concepts?",
+    "reference_answer": "The cash_flow.txt document contains the operating cash flow definition and the cash flow statement overview, including investing and financing activities and the formula for free cash flow.",
+    "expected_files": ["cash_flow.txt"],
+    "evaluation_type": "retrieval"
+  },
+  {
+    "id": 21,
+    "category": "function_understanding",
+    "question": "What validation does EmbeddingService._extract_embedding perform?",
+    "reference_answer": "It checks that the Ollama response is a dictionary and that it contains either embeddings or embedding. It validates that the nested list is non-empty and numeric, converting values to floats and raising EmbeddingServiceError otherwise.",
+    "expected_files": ["backend/app/services/embedding_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 22,
+    "category": "dependency_understanding",
+    "question": "How are the knowledge base documents loaded into the vector store before searching?",
+    "reference_answer": "DocumentLoader reads the .txt files, ChunkingService splits them into chunks, EmbeddingService creates vectors using the nomic-embed-text model, and VectorStoreService.add_chunks persists the vectors in ChromaDB under a collection named finquery_knowledge_base.",
+    "expected_files": ["backend/app/services/document_loader.py", "backend/app/services/chunking_service.py", "backend/app/services/embedding_service.py", "backend/app/services/vector_store_service.py"],
+    "evaluation_type": "dependency"
+  },
+  {
+    "id": 23,
+    "category": "bug_analysis",
+    "question": "What happens when a query embedding is missing or invalid during vector search?",
+    "reference_answer": "VectorStoreService._validate_query_embedding raises a VectorStoreServiceError when the query embedding is not a non-empty list of numeric values. This prevents invalid search requests from reaching ChromaDB.",
+    "expected_files": ["backend/app/services/vector_store_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 24,
+    "category": "refactoring",
+    "question": "Which service would likely change first if the project switched from Ollama to another LLM provider, and why?",
+    "reference_answer": "The OllamaService abstraction is the likely first point of change because ApplicationService depends on it through a common generate_response API. The RAG and retrieval services would stay mostly the same, and the provider-specific logic would be isolated to the LLM client layer.",
+    "expected_files": ["backend/app/services/ollama_service.py", "backend/app/services/application_service.py"],
+    "evaluation_type": "correctness"
+  },
+  {
+    "id": 25,
+    "category": "multi_file",
+    "question": "Which files would need to change if the generation model were set to qwen2.5-coder:3b instead of codellama?",
+    "reference_answer": "In the current architecture, the model choice is configured through environment variables and passed into OllamaService. The main change would be in configuration and environment values, while the same application files and knowledge base remain unchanged. The most relevant files are backend/app/core/config.py and the Docker environment configuration, not the retrieval stack.",
+    "expected_files": ["backend/app/core/config.py", "docker-compose.yml"],
+    "evaluation_type": "multi_file"
+  }
+]
